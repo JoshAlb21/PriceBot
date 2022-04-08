@@ -15,7 +15,7 @@
     "notification_adress": {
         "receiver_email": "joshua.albiez3@gmail.com",
         "sender_email": "aca.tutor.help@gmail.com",
-        "sender_password": "test"
+        "sender_password": "password.txt"
     },
     "notification_mode": {
         "decrease_of_prodcts": "True",

@@ -13,13 +13,18 @@ class NotificationService:
         print(f'{tools.get_current_time()} CHANGE!!!')
         self.send_email(new_lines)
 
-    
+    def read_email_pass(self, pass_file:str) -> str:
+        '''Read password from file. DISCLAIMER: make sure you do no commit the password file (-> git ignore)'''
+        with open(pass_file, 'r') as f:
+            lines = f.readlines()
+        return lines[0].strip()
+
     def send_email(self, message:list):
 
         port = 587  # For starttls
         smtp_server = "smtp.gmail.com"
         sender_email = self.email_information['sender_email']
-        password = self.email_information['senderpassword']
+        password = self.read_email_pass(self.email_information['sender_password'])
         receiver_email = self.email_information['receiver_email']
         
         list_as_str = ' '.join(message)
