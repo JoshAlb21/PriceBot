@@ -11,7 +11,7 @@
   <a href="https://github.com/github_username/repo_name">
     <img src="images/price_bot_logo.png" alt="Logo" width="80" height="80">
   </a>
-<br />
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
