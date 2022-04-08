@@ -9,24 +9,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/price_bot_logo.png" alt="Logo" width="80" height="80">
   </a>
-
-<h3 align="center">project_title</h3>
-
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
 
 
 
@@ -43,13 +27,11 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#parameters">Parameters</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -63,7 +45,12 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+*WORK IN PROGRESS* Bot which allows you to track price and stock availability of the desired product.
+1.Search product on Amazon
+2.Apply filter to narrow down the results
+3.Copy URL
+4.Get notification by email about new products regarding your search
+5.Be happy to be the first one to get the product
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -71,14 +58,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Python](https://www.python.org/)
+* [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/)
+* [requests](https://docs.python-requests.org/en/latest/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,101 +70,46 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ## Getting Started
 
 all settings can be adjusted in config.json
+password for sender email adress has to be saved in password.txt file (Do not share this file with anyone!)
 
-parameter explanation:
-"ignore_price_above_eur": "1300" ignore any changes for products above 1300euro
-"cooldown_for_change_notification_sec": "20" the higher the less (possible spam) mails you will receive (sometimes a high fluctuation occurs)
+### Parameters
 
-"notification_mode"
-    #TODO "decrease_of_prodcts":
-    #TODO "increase_of_prodcts": 
-    #TODO "decrease_num_of_items": 
-    #TODO"increase_num_of_items": 
-    #TODO "decrease_price":
-    #TODO "increase_price": 
-    "ignore_price_above_eur": 
-    #TODO"ignore_price_below_eur":
-    #TODO "cooldown_for_change_notification_sec":
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* "notification_mode"
   ```sh
-  npm install npm@latest -g
+  #TODO "decrease_of_prodcts":
+  #TODO "increase_of_prodcts": 
+  #TODO "decrease_num_of_items": 
+  #TODO"increase_num_of_items": 
+  #TODO "decrease_price":
+  #TODO "increase_price": 
+  "ignore_price_above_eur": ignore any changes for products above x euro
+  #TODO"ignore_price_below_eur":
+  #TODO "cooldown_for_change_notification_sec" seconds to cool down after one email (the higher the less (possible spam) mails you will receive (sometimes a high fluctuation occurs))
   ```
+
+    
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. save password from sender email in password.txt
+2. Get URL from desired product on amazon
+3. Adjust parameter in config.json
+4. Run mac_watcher.py
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Multiple notification channels
+- [ ] Automatically buy product
+    - [ ] check certain price range
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
