@@ -12,7 +12,7 @@ class DataHandler:
     def handle_results(self, results:list, notification_service:NotificationService) -> None:
         if results is not None:
             prices = [results[price] for price in range(1, len(results), 2) ]
-            log_file = 'readme.txt'
+            log_file = 'product_log.txt'
             file_exists = exists(log_file)
             if not file_exists:
                 with open(log_file, 'w') as f:
