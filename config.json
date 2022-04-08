@@ -1,0 +1,39 @@
+{
+    "target_info": {
+        "url": "https://www.amazon.de/s?i=electronics&bbn=8872698031&rh=n%3A8872698031%2Cn%3A562066%2Cn%3A1626220031%2Cn%3A427957031%2Cp_89%3AApple%2Cp_36%3A50000-99999999%2Cp_72%3A419118031&dc&qid=1649414973&rnid=419116031&ref=nav_ya_signin",
+        "retry_time": [
+            3,
+            5
+        ],
+        "max_retries": 15,
+        "backup_url": [
+            "https://www.amazon.de/s?i=electronics&bbn=8872698031&rh=n%3A8872698031%2Cn%3A562066%2Cn%3A1626220031%2Cn%3A427957031%2Cp_89%3AApple%2Cp_36%3A50000-99999999%2Cp_72%3A419120031&dc&qid=1649422349&rnid=419116031&ref=sr_nr_p_72_4",
+            "https://www.amazon.de/s?i=electronics&bbn=8872698031&rh=n%3A8872698031%2Cn%3A562066%2Cn%3A1626220031%2Cn%3A427957031%2Cp_89%3AApple%2Cp_72%3A419120031%2Cp_36%3A115014031&dc&qid=1649422355&rnid=389294011&ref=sr_nr_p_36_1",
+            "https://www.amazon.de/s?i=electronics&bbn=8872698031&rh=n%3A8872698031%2Cn%3A562066%2Cn%3A1626220031%2Cn%3A427957031%2Cp_89%3AApple%2Cp_36%3A50000-99999999%2Cp_72%3A419118031&dc&qid=1649422383&rnid=419116031&ref=sr_nr_p_72_2"
+        ]
+    },
+    "notification_adress": {
+        "receiver_email": "joshua.albiez3@gmail.com",
+        "sender_email": "aca.tutor.help@gmail.com",
+        "sender_password": "cmeRzQvAr7G9G7q"
+    },
+    "notification_mode": {
+        "decrease_of_prodcts": "True",
+        "increase_of_prodcts": "True",
+        "decrease_num_of_items": "True",
+        "increase_num_of_items": "True",
+        "decrease_price": "True",
+        "increase_price": "True",
+        "ignore_price_above_eur": "1.300",
+        "ignore_price_below_eur": "0",
+        "cooldown_for_change_notification_sec": "20"
+    },
+    "data_extractor_settings": {
+        "container_master": "div",
+        "element_master": "a-row a-size-base a-color-secondary",
+        "element_stock_per_product": "a-link-normal s-underline-text s-underline-link-text s-link-style",
+        "container_stock_per_product": "a",
+        "element_price_per_product": "a-color-base",
+        "container_price_per_product": "span"
+    }
+}
