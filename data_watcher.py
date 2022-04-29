@@ -30,6 +30,8 @@ class DataWatcher:
         while not abort:
             time.sleep(random.uniform(self.refresh_time[0], self.refresh_time[1]))
             soup = self.get_new_data(user_agent_random=ua.random)
+            if soup is None:
+                continue
             results = self.data_extractor.extract_from_soup(soup)
             if results:
                 self.no_data_counter = 0
@@ -48,7 +50,7 @@ class DataWatcher:
         except requests.exceptions.ConnectionError as e:
             print("Log error")
             tools.log_error(e)
-            return
+            return None
         content = r.content
         soup = BeautifulSoup(content, 'html.parser')
 
@@ -57,7 +59,7 @@ class DataWatcher:
     def switch_backup_url(self) -> Boolean:
         abort = False
         try:
-            self.url = self.back_up_url[self.used_backup_url]
+            self.url = self.backup_url[self.used_backup_url]
         except IndexError:
             print("No backup url available")
             abort = True

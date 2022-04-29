@@ -46,11 +46,11 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 *WORK IN PROGRESS* Bot which allows you to track price and stock availability of the desired product.
-1.Search product on Amazon
-2.Apply filter to narrow down the results
-3.Copy URL
-4.Get notification by email about new products regarding your search
-5.Be happy to be the first one to get the product
+1. Search product on Amazon
+2. Apply filter to narrow down the results
+3. Copy URL
+4. Get notification by email about new products regarding your search
+5. Be happy to be the first one to get the product
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

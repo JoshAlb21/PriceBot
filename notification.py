@@ -51,11 +51,11 @@ class NotificationService:
             notify = True
         return notify
     
-    def check_treshold_price(self, prices:list, price_treshold:float) -> bool:
+    def check_treshold_price(self, prices:list) -> bool:
         '''Notify condition'''
         notify = False
         for price in prices:
             price_f = tools.extract_float_from_price(price)
-            if price_f < price_treshold:
+            if float(price_f) < self.treshold_price:
                 notify = True
         return notify
